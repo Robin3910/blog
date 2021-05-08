@@ -3,15 +3,15 @@ title: ts随笔
 ---
     该笔记主要记录了一些编码过程中比较常见但是又容易模糊的知识点
 
-**原始类型**：string, boolean, number, null, void, symbol, undefined, bigint
+**原始类型**：`string`, `boolean`, `number`, `null`, `void`, `symbol`, `undefined`, `bigint`
 
-Tip: 编码过程中也有类似的关键字Boolean, Number, String等，这是JS的构造函数，和类型完全不同。
+Tip: 编码过程中也有类似的关键字`Boolean`, `Number`, `String`等，这是JS的构造函数，和类型完全不同。
 
 
 
 **Bigint**
 
-使用Bigint可以安全地存储和操作大整数，即这个数已经超过了JS构造函数Number能够表示的安全整数范围，使用Bigint需要使用ESnext编译辅助库。
+使用Bigint可以安全地存储和操作大整数，即这个数已经超过了JS构造函数`Number`能够表示的安全整数范围，使用`Bigint`需要使用`ESnext`编译辅助库。
 
 下面两段代码就可以看出区别：
 
@@ -35,7 +35,7 @@ console.log(max1 === max2); // false
 
 **unknown和any**
 
-unknown是更安全的any类型，any类型在赋值之前，可以通过.去获取属性和方法不会抛错，但是unknown会。
+`unknown`是更安全的`any`类型，`any`类型在赋值之前，可以通过.去获取属性和方法不会抛错，但是`unknown`会。
 
 ```ts
 let value: any;
@@ -57,7 +57,7 @@ zoo.foo; // error
 
 元组与数组非常相似，元组可以说是类型更加严格的数组。
 
-元组定义完后可以通过push添加元素，但是获取时会报错
+元组定义完后可以通过`push`添加元素，但是获取时会报错
 
 ```ts
 let x: [string, number];
@@ -87,7 +87,7 @@ console.log(Direction.up) // 0
 console.log(Direction[0]) // up
 ```
 
-从上述例子中可以看出枚举中实现了正反向同时映射，平常的例子中，一般都是正向映射，比如一个对象，key => value；
+从上述例子中可以看出枚举中实现了正反向同时映射，平常的例子中，一般都是正向映射，比如一个对象，`key => value`；
 
 直接看看枚举编译后的JS代码：
 
@@ -150,7 +150,7 @@ const user: partial<User> = {
 
 
 
-**类型编程：编写一个工具类型将interface中函数类型的名称取出来**
+**类型编程：编写一个工具类型将`interface`中函数类型的名称取出来**
 
 ```TS
 interface Part {
@@ -168,7 +168,7 @@ type funcName = FunctionPropName<Part>; // type funcName = 'updatePart'
 
 
 
-**类型编程：取出下面interface中的可选类型（利用空对象进行扩展甄别，网上看到的一种方法，很巧妙）**
+**类型编程：取出下面`interface`中的可选类型（利用空对象进行扩展甄别，网上看到的一种方法，很巧妙）**
 
 ```TS
 interface People {
