@@ -4,7 +4,7 @@
     <div class="avatar"><a href="<%- config.root%>"><img style="width: 100px;height: 100px;" src="<%- url_for(theme.avatar)%>"></a></div>
     <span><%- config.author%></span>
     <h1><%- config.title%></h1>
-    <%if(config.subtitle.length) {%><span>——<%- config.subtitle%></span><%}%>
+    <%if(config.subtitle.length) {%><span><%- config.subtitle%></span><%}%>
     <%if (theme.social.enable) { %><%- partial('sociallinks')%><%}%>
   </div>
   </div>

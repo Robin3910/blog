@@ -151,7 +151,7 @@ title: 移动端适配总结
 
 ### 3.2、rem+px2rem适配方案
 
-> 在W3C官网上是这样描述rem的——“font size of the root element” 。
+    在W3C官网上是这样描述rem的——“font size of the root element” 。
 
 基本思路：
 

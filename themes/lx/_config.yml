@@ -10,7 +10,7 @@ favicon: favicon.ico
 theme_color: "#58b77a"
 
 # personal information
-personal_des: Hello, World!
+personal_des: 祝你暴富
 
 # avatar
 avatar: images/avatar.jpeg
@@ -34,12 +34,12 @@ menu_theme: greenish
 menu:
   category: false #category
   pages:  #the page created by yourself
-    enable: true
+    enable: false
     links:
       Guestbook: guestbook/
       About: about/
   friends:
-    enable: true
+    enable: false
     links:
       Theme-Lx: https://lx.js.org
 
